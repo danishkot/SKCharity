@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+    <ul>
+        <!-- Dropdown menu -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn">click me</a>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+				<a href="campaigns.html">Campaigns</a>
+				<a href="getinvolved.html">Get Involved</a>
+				<a href="contact.html">Contact Us</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+    </header>
+
+    <section>
+        <h2>Contact Form</h2>
+        <form>
+            <label>Full Name:</label><input type="text" required>
+            <label>Email:</label><input type="email" required>
+            <label>Subject:</label><input type="text" required>
+            <label>Message:</label><textarea required></textarea>
+            <button type="submit">Send</button>
+        </form>
+		<h2>Donate Now</h2>
+    <form id="donationForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="amount">Donation Amount (RM):</label>
+        <input type="number" id="amount" name="amount" required min="1">
+        
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">Select a Payment Method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="bankTransfer">Bank Transfer</option>
+        </select>
+        
+        <button type="submit">Submit Donation</button>
+    </form>
+    </section>
+<script>
+    // Add event listener to the donation form
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+        // Prevent form submission to perform validation
+        event.preventDefault();
+
+        // Get the form values
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const amount = document.getElementById('amount').value;
+        const paymentMethod = document.getElementById('paymentMethod').value;
+
+        // Validate Full Name
+        if (fullName === '') {
+            alert('Please enter your full name.');
+            return; // Stop the form from submitting if validation fails
+        }
+
+        // Validate Email
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email === '' || !emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Validate Donation Amount
+        if (amount === '' || amount < 1) {
+            alert('Please enter a valid donation amount.');
+            return;
+        }
+
+        // Validate Payment Method
+        if (paymentMethod === '') {
+            alert('Please select a payment method.');
+            return;
+        }
+
+        // If all validations pass, alert success and submit the form (or actually submit it if using real backend)
+        alert('Thank you for your donation!');
+        // Uncomment below to actually submit the form (this is a mock, in a real setup it would send to the server)
+        // this.submit();
+    });
+</script>
+    <footer>
+       <p>&copy; 2025 DaNaNasCorp. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

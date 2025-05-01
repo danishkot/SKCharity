@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .directors-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .director-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+            width: 200px;
+        }
+
+        .director-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .director-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fffdfd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About SumbangKasih Charity</h1>
+        <nav>
+            <ul>
+                <!-- Dropdown menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Click Me</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="campaigns.html">Campaigns</a>
+                        <a href="getinvolved.html">Get Involved</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Our History</h2>
+        <p>
+            Established in 2023, DaNaNas Corp. is a non-governmental organization (NGO) dedicated to using information technology (IT) for social good. Our mission is to bridge the digital divide and support underprivileged communities by providing technology-driven charity initiatives, IT education, and digital empowerment programs.
+        </p>
+        <p>
+            At DaNaNas Corp., we believe that access to technology is a fundamental right. We work tirelessly to ensure that schools, orphanages, and low-income communities have the necessary resources to learn, grow, and thrive in the digital world. Through donation campaigns, free IT training, and community outreach projects, we strive to create a brighter future for all.
+        </p>
+        <p>
+            Join us in making a difference! Together, we can use technology to empower, educate, and uplift those in need.
+        </p>
+    </section>
+
+    <section>
+        <h2>Board of Directors</h2>
+        <div class="directors-container">
+            <div class="director-card">
+                <img src="DanSem.jpeg" alt="Danish Akhtar Ameir">
+                <p><strong>Danish Akhtar Ameir</strong></p>
+            </div>
+            <div class="director-card">
+                <img src="NajSem.jpeg" alt="Muhammad Najmi">
+                <p><strong>Muhammad Najmi</strong></p>
+            </div>
+            <div class="director-card">
+                <img src="NasSem.jpeg" alt="Muhammad Anas Safwan">
+                <p><strong>Muhammad Anas Safwan</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DaNaNasCorp. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaigns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SumbangKasih Charity Campaigns</h1>
+        <nav>
+    <ul>
+        <!-- Dropdown menu -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn">click me</a>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+				<a href="campaigns.html">Campaigns</a>
+				<a href="getinvolved.html">Get Involved</a>
+				<a href="contact.html">Contact Us</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+    </header>
+<section>
+    <h2>Our Campaigns</h2>
+	<ul>
+            <li>Food Drive for Homeless</li>
+            <li>Education Support for Children</li>
+            <li>Medical Aid for Low-Income Families</li>
+        </ul>
+ 	<div class="slideshow-wrapper">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="DanChar2.jpg" alt="Campaign 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="DanChar3.jfif" alt="Campaign 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="DanChar4.jfif" alt="Campaign 3">
+        </div>
+    </div>
+</div>
+
+</section>
+
+	<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    showSlides();
+</script>
+
+    <footer>
+       <p>&copy; 2025 DaNaNasCorp. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

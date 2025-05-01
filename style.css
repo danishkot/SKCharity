@@ -200,15 +200,6 @@ form textarea {
     height: 120px;
 }
 
-/* ========== Footer ========== */
-footer {
-    background: #cdb4db;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-}
 /* General Styling for Image Container */
 .slideshow-container {
     width: 100%;
@@ -281,6 +272,15 @@ footer {
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+}
+/* ========== Footer ========== */
+footer {
+    background: #cdb4db;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
 
 

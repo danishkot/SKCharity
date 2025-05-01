@@ -209,6 +209,58 @@ footer {
     margin-top: 40px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
+/* General Styling for Image Container */
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px; /* Maximum width of slideshow */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Ensures no images spill outside the container */
+}
+
+.mySlides img {
+    width: 100%; /* Makes the image take up 100% of the container's width */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+}
+
+/* Slideshow Transition Effect */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Mobile-friendly Styles */
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%; /* Ensures it fills the width on smaller screens */
+    }
+
+    .mySlides img {
+        width: 100%; /* Makes the image scale to full container width */
+        height: auto; /* Keeps the aspect ratio intact */
+    }
+}
+
+/* Optional: For smaller images when viewed on mobile */
+@media (max-width: 480px) {
+    .slideshow-container {
+        max-width: 100%; /* Use full width */
+        padding: 0 10px; /* Optional padding for better mobile experience */
+    }
+
+    .mySlides img {
+        width: 100%; /* Ensures images are responsive */
+        height: auto; /* Aspect ratio preserved */
+    }
+}
+
 .slideshow-wrapper {
     width: 800px;
     height: 450px;
